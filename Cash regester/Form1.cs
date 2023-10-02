@@ -46,6 +46,7 @@ namespace Cash_regester
             {
                 numberslices = Convert.ToInt32(slicesinput.Text);
                 numberdrink = Convert.ToInt32(drinkoutput.Text);
+                numberwings = Convert.ToInt32(wingsoutput.Text);
 
 
 
@@ -57,13 +58,13 @@ namespace Cash_regester
                 taxamount = taxrate * subtotal;
                 totalprice = subtotal + taxamount;
 
-                Recieptoutput.Text = $"Welcome to foods are us\n";
-                Recieptoutput.Text += $"{numberslices}pizza slices....   {slicetotal}\n";
-                Recieptoutput.Text += $"{numberwings} wings....          {wingstotal}\n";
-                Recieptoutput.Text += $"{numberdrink} drinks....         {drinktotal}\n\n";
-                Recieptoutput.Text += $" subtotal....                    {subtotal}\n";
-                Recieptoutput.Text += $" Taxtotal....                    {taxamount}\n";
-
+                Recieptoutput.Text = $"           Welcome to foods are us\n\n";
+                Recieptoutput.Text += $"{numberslices} pizza slices....  $ {slicetotal}\n\n";
+                Recieptoutput.Text += $"{numberwings}  wings....         $ {wingstotal}\n\n";
+                Recieptoutput.Text += $"{numberdrink}  drinks....        $ {drinktotal}\n\n";
+                Recieptoutput.Text += $" subtotal....        $ {subtotal}\n\n";
+                Recieptoutput.Text += $" Tax total....       $ {taxamount}\n\n";
+                Recieptoutput.Text += $" Total....           $ {totalprice}";
             }
             catch
             {
