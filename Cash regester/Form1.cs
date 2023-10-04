@@ -42,23 +42,38 @@ namespace Cash_regester
 
         private void calculate_Click(object sender, EventArgs e)
         {
+            numberslices = Convert.ToInt32(slicesinput.Text);
+            numberdrink = Convert.ToInt32(drinkintput.Text);
+            numberwings = Convert.ToInt32(wingsinput.Text);
+
+
+            slicetotal = sliceprice * numberslices;
+            drinktotal = drinkprice * numberdrink;
+            wingstotal = wingprice * numberwings;
+
+            subtotal = slicetotal + wingstotal + drinktotal;
+            taxamount = taxrate * subtotal;
+            totalprice = subtotal + taxamount;
+
+           subtotaloutput.Text =$"{subtotal}"; 
+            Taxtoutput.Text = $"{taxamount}";
+            Totaloutput.Text = $"{totalprice}";
+
+        }
+
+        private void Recieptoutput_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void printbutton_Click(object sender, EventArgs e)
+        {
             try
             {
-                numberslices = Convert.ToInt32(slicesinput.Text);
-                numberdrink = Convert.ToInt32(drinkoutput.Text);
-                numberwings = Convert.ToInt32(wingsoutput.Text);
-
-
-
-                slicetotal = sliceprice * numberslices;
-                drinktotal = drinkprice * numberdrink;
-                wingstotal = wingprice * numberwings;
-
-                subtotal = slicetotal + wingstotal + drinktotal;
-                taxamount = taxrate * subtotal;
-                totalprice = subtotal + taxamount;
+                
 
                 Recieptoutput.Text = $"           Welcome to foods are us\n\n";
+
                 Recieptoutput.Text += $"{numberslices} pizza slices....  $ {slicetotal}\n\n";
                 Recieptoutput.Text += $"{numberwings}  wings....         $ {wingstotal}\n\n";
                 Recieptoutput.Text += $"{numberdrink}  drinks....        $ {drinktotal}\n\n";
@@ -70,10 +85,6 @@ namespace Cash_regester
             {
                 Recieptoutput.Text = "ERROR";
             }
-        }
-
-        private void Recieptoutput_Click(object sender, EventArgs e)
-        {
 
         }
     }

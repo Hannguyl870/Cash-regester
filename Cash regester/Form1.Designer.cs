@@ -33,16 +33,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.slicesinput = new System.Windows.Forms.TextBox();
-            this.wingsoutput = new System.Windows.Forms.TextBox();
-            this.drinkoutput = new System.Windows.Forms.TextBox();
+            this.wingsinput = new System.Windows.Forms.TextBox();
+            this.drinkintput = new System.Windows.Forms.TextBox();
             this.Titlelable = new System.Windows.Forms.Label();
             this.calculate = new System.Windows.Forms.Button();
-            this.Subtotaloutput = new System.Windows.Forms.Label();
-            this.Taxoutput = new System.Windows.Forms.Label();
+            this.Subtotallable = new System.Windows.Forms.Label();
+            this.Taxlable = new System.Windows.Forms.Label();
+            this.Totallable = new System.Windows.Forms.Label();
+            this.subtotaloutput = new System.Windows.Forms.Label();
+            this.Taxtoutput = new System.Windows.Forms.Label();
             this.Totaloutput = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.printbutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Recieptoutput
@@ -91,19 +92,19 @@
             this.slicesinput.Size = new System.Drawing.Size(100, 22);
             this.slicesinput.TabIndex = 4;
             // 
-            // wingsoutput
+            // wingsinput
             // 
-            this.wingsoutput.Location = new System.Drawing.Point(164, 110);
-            this.wingsoutput.Name = "wingsoutput";
-            this.wingsoutput.Size = new System.Drawing.Size(100, 22);
-            this.wingsoutput.TabIndex = 5;
+            this.wingsinput.Location = new System.Drawing.Point(164, 110);
+            this.wingsinput.Name = "wingsinput";
+            this.wingsinput.Size = new System.Drawing.Size(100, 22);
+            this.wingsinput.TabIndex = 5;
             // 
-            // drinkoutput
+            // drinkintput
             // 
-            this.drinkoutput.Location = new System.Drawing.Point(164, 145);
-            this.drinkoutput.Name = "drinkoutput";
-            this.drinkoutput.Size = new System.Drawing.Size(100, 22);
-            this.drinkoutput.TabIndex = 6;
+            this.drinkintput.Location = new System.Drawing.Point(164, 145);
+            this.drinkintput.Name = "drinkintput";
+            this.drinkintput.Size = new System.Drawing.Size(100, 22);
+            this.drinkintput.TabIndex = 6;
             // 
             // Titlelable
             // 
@@ -125,72 +126,85 @@
             this.calculate.UseVisualStyleBackColor = false;
             this.calculate.Click += new System.EventHandler(this.calculate_Click);
             // 
-            // Subtotaloutput
+            // Subtotallable
             // 
-            this.Subtotaloutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Subtotaloutput.Location = new System.Drawing.Point(38, 279);
-            this.Subtotaloutput.Name = "Subtotaloutput";
-            this.Subtotaloutput.Size = new System.Drawing.Size(100, 23);
-            this.Subtotaloutput.TabIndex = 9;
-            this.Subtotaloutput.Text = "Subtotal";
+            this.Subtotallable.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Subtotallable.Location = new System.Drawing.Point(38, 279);
+            this.Subtotallable.Name = "Subtotallable";
+            this.Subtotallable.Size = new System.Drawing.Size(100, 23);
+            this.Subtotallable.TabIndex = 9;
+            this.Subtotallable.Text = "Subtotal";
             // 
-            // Taxoutput
+            // Taxlable
             // 
-            this.Taxoutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Taxoutput.Location = new System.Drawing.Point(38, 314);
-            this.Taxoutput.Name = "Taxoutput";
-            this.Taxoutput.Size = new System.Drawing.Size(100, 23);
-            this.Taxoutput.TabIndex = 10;
-            this.Taxoutput.Text = "Tax Total";
+            this.Taxlable.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Taxlable.Location = new System.Drawing.Point(38, 314);
+            this.Taxlable.Name = "Taxlable";
+            this.Taxlable.Size = new System.Drawing.Size(100, 23);
+            this.Taxlable.TabIndex = 10;
+            this.Taxlable.Text = "Tax Total";
+            // 
+            // Totallable
+            // 
+            this.Totallable.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Totallable.Location = new System.Drawing.Point(38, 346);
+            this.Totallable.Name = "Totallable";
+            this.Totallable.Size = new System.Drawing.Size(100, 23);
+            this.Totallable.TabIndex = 11;
+            this.Totallable.Text = "Total";
+            // 
+            // subtotaloutput
+            // 
+            this.subtotaloutput.BackColor = System.Drawing.Color.White;
+            this.subtotaloutput.Location = new System.Drawing.Point(161, 279);
+            this.subtotaloutput.Name = "subtotaloutput";
+            this.subtotaloutput.Size = new System.Drawing.Size(100, 23);
+            this.subtotaloutput.TabIndex = 12;
+            // 
+            // Taxtoutput
+            // 
+            this.Taxtoutput.BackColor = System.Drawing.Color.White;
+            this.Taxtoutput.Location = new System.Drawing.Point(164, 319);
+            this.Taxtoutput.Name = "Taxtoutput";
+            this.Taxtoutput.Size = new System.Drawing.Size(100, 23);
+            this.Taxtoutput.TabIndex = 13;
             // 
             // Totaloutput
             // 
-            this.Totaloutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Totaloutput.Location = new System.Drawing.Point(38, 346);
+            this.Totaloutput.BackColor = System.Drawing.Color.White;
+            this.Totaloutput.Location = new System.Drawing.Point(164, 351);
             this.Totaloutput.Name = "Totaloutput";
             this.Totaloutput.Size = new System.Drawing.Size(100, 23);
-            this.Totaloutput.TabIndex = 11;
-            this.Totaloutput.Text = "Total";
+            this.Totaloutput.TabIndex = 14;
             // 
-            // label1
+            // printbutton
             // 
-            this.label1.Location = new System.Drawing.Point(213, 279);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 23);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "label1";
-            // 
-            // label4
-            // 
-            this.label4.Location = new System.Drawing.Point(213, 319);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 23);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "label4";
-            // 
-            // label5
-            // 
-            this.label5.Location = new System.Drawing.Point(213, 351);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 23);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "label5";
+            this.printbutton.BackColor = System.Drawing.Color.Black;
+            this.printbutton.ForeColor = System.Drawing.Color.White;
+            this.printbutton.Location = new System.Drawing.Point(73, 401);
+            this.printbutton.Name = "printbutton";
+            this.printbutton.Size = new System.Drawing.Size(127, 43);
+            this.printbutton.TabIndex = 15;
+            this.printbutton.Text = "Print reciept";
+            this.printbutton.UseVisualStyleBackColor = false;
+            this.printbutton.Click += new System.EventHandler(this.printbutton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 530);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.printbutton);
             this.Controls.Add(this.Totaloutput);
-            this.Controls.Add(this.Taxoutput);
-            this.Controls.Add(this.Subtotaloutput);
+            this.Controls.Add(this.Taxtoutput);
+            this.Controls.Add(this.subtotaloutput);
+            this.Controls.Add(this.Totallable);
+            this.Controls.Add(this.Taxlable);
+            this.Controls.Add(this.Subtotallable);
             this.Controls.Add(this.calculate);
             this.Controls.Add(this.Titlelable);
-            this.Controls.Add(this.drinkoutput);
-            this.Controls.Add(this.wingsoutput);
+            this.Controls.Add(this.drinkintput);
+            this.Controls.Add(this.wingsinput);
             this.Controls.Add(this.slicesinput);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -211,16 +225,17 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox slicesinput;
-        private System.Windows.Forms.TextBox wingsoutput;
-        private System.Windows.Forms.TextBox drinkoutput;
+        private System.Windows.Forms.TextBox wingsinput;
+        private System.Windows.Forms.TextBox drinkintput;
         private System.Windows.Forms.Label Titlelable;
         private System.Windows.Forms.Button calculate;
-        private System.Windows.Forms.Label Subtotaloutput;
-        private System.Windows.Forms.Label Taxoutput;
+        private System.Windows.Forms.Label Subtotallable;
+        private System.Windows.Forms.Label Taxlable;
+        private System.Windows.Forms.Label Totallable;
+        private System.Windows.Forms.Label subtotaloutput;
+        private System.Windows.Forms.Label Taxtoutput;
         private System.Windows.Forms.Label Totaloutput;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button printbutton;
     }
 }
 
