@@ -1,4 +1,7 @@
-﻿using System;
+﻿//hannah guylee
+//october 2023
+//cashregester program 
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -6,6 +9,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace Cash_regester
@@ -26,9 +30,9 @@ namespace Cash_regester
         double taxrate = 0.13;
         double taxamount = 0;
         double totalprice = 0;
-        //    Subtotaloutput.Text = subtotal.ToString("C");
-        //    Taxoutput.Text = taxamount.ToString("C");
-        //    Totaloutput.Text = totalprice.ToString("C");
+        double change = 0;
+        double money = 0;
+      
 
         public Form1()
         {
@@ -55,9 +59,9 @@ namespace Cash_regester
             taxamount = taxrate * subtotal;
             totalprice = subtotal + taxamount;
 
-           subtotaloutput.Text =$"{subtotal}"; 
-            Taxtoutput.Text = $"{taxamount}";
-            Totaloutput.Text = $"{totalprice}";
+           subtotaloutput.Text =$"$ {subtotal}"; 
+            Taxtoutput.Text = $"$ {taxamount}";
+            Totaloutput.Text = $"$ {totalprice}";
 
         }
 
@@ -73,19 +77,39 @@ namespace Cash_regester
                 
 
                 Recieptoutput.Text = $"           Welcome to foods are us\n\n";
-
+                Thread.Sleep(500);
                 Recieptoutput.Text += $"{numberslices} pizza slices....  $ {slicetotal}\n\n";
+                Thread.Sleep(500);
                 Recieptoutput.Text += $"{numberwings}  wings....         $ {wingstotal}\n\n";
+                Thread.Sleep(500);
                 Recieptoutput.Text += $"{numberdrink}  drinks....        $ {drinktotal}\n\n";
+                Thread.Sleep(500);
                 Recieptoutput.Text += $" subtotal....        $ {subtotal}\n\n";
+                Thread.Sleep(500);
                 Recieptoutput.Text += $" Tax total....       $ {taxamount}\n\n";
+                Thread.Sleep(500);
                 Recieptoutput.Text += $" Total....           $ {totalprice}";
+                Thread.Sleep(500);
             }
             catch
             {
                 Recieptoutput.Text = "ERROR";
             }
 
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+
+            //change = money - totalprice;
+
+            //Changeoutput.Text = $" $ {change}";
         }
     }
     
