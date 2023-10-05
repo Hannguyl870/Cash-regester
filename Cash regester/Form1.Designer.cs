@@ -46,7 +46,7 @@
             this.printbutton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.moneyinput = new System.Windows.Forms.TextBox();
+            this.tenderedinput = new System.Windows.Forms.TextBox();
             this.changelable = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.Changeoutput = new System.Windows.Forms.Label();
@@ -118,7 +118,7 @@
             // 
             // Titlelable
             // 
-            this.Titlelable.BackColor = System.Drawing.Color.Brown;
+            this.Titlelable.BackColor = System.Drawing.Color.MediumTurquoise;
             this.Titlelable.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Titlelable.Location = new System.Drawing.Point(4, 1);
             this.Titlelable.Name = "Titlelable";
@@ -173,6 +173,7 @@
             // subtotaloutput
             // 
             this.subtotaloutput.BackColor = System.Drawing.Color.White;
+            this.subtotaloutput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.subtotaloutput.Location = new System.Drawing.Point(161, 191);
             this.subtotaloutput.Name = "subtotaloutput";
             this.subtotaloutput.Size = new System.Drawing.Size(100, 23);
@@ -181,6 +182,7 @@
             // Taxtoutput
             // 
             this.Taxtoutput.BackColor = System.Drawing.Color.White;
+            this.Taxtoutput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Taxtoutput.Location = new System.Drawing.Point(161, 227);
             this.Taxtoutput.Name = "Taxtoutput";
             this.Taxtoutput.Size = new System.Drawing.Size(100, 23);
@@ -189,6 +191,7 @@
             // Totaloutput
             // 
             this.Totaloutput.BackColor = System.Drawing.Color.White;
+            this.Totaloutput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Totaloutput.Location = new System.Drawing.Point(161, 260);
             this.Totaloutput.Name = "Totaloutput";
             this.Totaloutput.Size = new System.Drawing.Size(100, 23);
@@ -208,7 +211,7 @@
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.Black;
+            this.label1.BackColor = System.Drawing.Color.MediumTurquoise;
             this.label1.Location = new System.Drawing.Point(9, 295);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(367, 19);
@@ -224,12 +227,12 @@
             this.label4.TabIndex = 17;
             this.label4.Text = "Tendered";
             // 
-            // moneyinput
+            // tenderedinput
             // 
-            this.moneyinput.Location = new System.Drawing.Point(154, 346);
-            this.moneyinput.Name = "moneyinput";
-            this.moneyinput.Size = new System.Drawing.Size(100, 22);
-            this.moneyinput.TabIndex = 18;
+            this.tenderedinput.Location = new System.Drawing.Point(154, 346);
+            this.tenderedinput.Name = "tenderedinput";
+            this.tenderedinput.Size = new System.Drawing.Size(100, 22);
+            this.tenderedinput.TabIndex = 18;
             // 
             // changelable
             // 
@@ -238,7 +241,7 @@
             this.changelable.Name = "changelable";
             this.changelable.Size = new System.Drawing.Size(100, 23);
             this.changelable.TabIndex = 19;
-            this.changelable.Text = "change ";
+            this.changelable.Text = "Change ";
             // 
             // button1
             // 
@@ -256,9 +259,10 @@
             // Changeoutput
             // 
             this.Changeoutput.BackColor = System.Drawing.Color.White;
-            this.Changeoutput.Location = new System.Drawing.Point(151, 440);
+            this.Changeoutput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Changeoutput.Location = new System.Drawing.Point(154, 436);
             this.Changeoutput.Name = "Changeoutput";
-            this.Changeoutput.Size = new System.Drawing.Size(103, 23);
+            this.Changeoutput.Size = new System.Drawing.Size(100, 23);
             this.Changeoutput.TabIndex = 21;
             // 
             // Form1
@@ -269,7 +273,7 @@
             this.Controls.Add(this.Changeoutput);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.changelable);
-            this.Controls.Add(this.moneyinput);
+            this.Controls.Add(this.tenderedinput);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.printbutton);
@@ -316,7 +320,7 @@
         private System.Windows.Forms.Button printbutton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox moneyinput;
+        private System.Windows.Forms.TextBox tenderedinput;
         private System.Windows.Forms.Label changelable;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label Changeoutput;

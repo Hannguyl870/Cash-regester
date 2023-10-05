@@ -31,7 +31,7 @@ namespace Cash_regester
         double taxamount = 0;
         double totalprice = 0;
         double change = 0;
-        double money = 0;
+        double tenderd = 0;
       
 
         public Form1()
@@ -59,10 +59,16 @@ namespace Cash_regester
             taxamount = taxrate * subtotal;
             totalprice = subtotal + taxamount;
 
-           subtotaloutput.Text =$"$ {subtotal}"; 
-            Taxtoutput.Text = $"$ {taxamount}";
-            Totaloutput.Text = $"$ {totalprice}";
+           subtotaloutput.Text =$" {subtotal.ToString("C")}"; 
+            Taxtoutput.Text = $" {taxamount.ToString("C")}";
+            Totaloutput.Text = $" {totalprice.ToString("C")}";
 
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            tenderd = Convert.ToInt32(tenderedinput.Text);
+            change = tenderd - totalprice;
+            Changeoutput.Text = $"  {change.ToString("C")}";
         }
 
         private void Recieptoutput_Click(object sender, EventArgs e)
@@ -74,22 +80,39 @@ namespace Cash_regester
         {
             try
             {
-                
+
 
                 Recieptoutput.Text = $"           Welcome to foods are us\n\n";
+                Refresh();
+                Thread.Sleep(1000);
+                Recieptoutput.Text += $"             order number 1031\n\n";
+                Refresh();
+                Thread.Sleep(1000);
+                Recieptoutput.Text += $"{numberslices} pizza slices....   {slicetotal.ToString("C")}\n\n";
+                Refresh();
                 Thread.Sleep(500);
-                Recieptoutput.Text += $"{numberslices} pizza slices....  $ {slicetotal}\n\n";
+                Recieptoutput.Text += $"{numberwings}  wings....          {wingstotal.ToString("C")}\n\n";
+                Refresh();
                 Thread.Sleep(500);
-                Recieptoutput.Text += $"{numberwings}  wings....         $ {wingstotal}\n\n";
+                Recieptoutput.Text += $"{numberdrink}  drinks....         {drinktotal.ToString("C")}\n\n";
+                Refresh();
                 Thread.Sleep(500);
-                Recieptoutput.Text += $"{numberdrink}  drinks....        $ {drinktotal}\n\n";
+                Recieptoutput.Text += $" subtotal....         {subtotal.ToString("C")}\n\n";
+                Refresh();
                 Thread.Sleep(500);
-                Recieptoutput.Text += $" subtotal....        $ {subtotal}\n\n";
+                Recieptoutput.Text += $" Tax total....        {taxamount.ToString("C")}\n\n";
+                Refresh();
                 Thread.Sleep(500);
-                Recieptoutput.Text += $" Tax total....       $ {taxamount}\n\n";
+                Recieptoutput.Text += $" Total....            {totalprice.ToString("C")}\n\n";
+                Refresh();
                 Thread.Sleep(500);
-                Recieptoutput.Text += $" Total....           $ {totalprice}";
+                Recieptoutput.Text += $" Tenderd....          {tenderd.ToString("C")}\n\n";
+                Refresh();
                 Thread.Sleep(500);
+                Recieptoutput.Text += $" change....           {change.ToString("C")}\n\n";
+                Refresh();
+                Thread.Sleep(500);
+                Recieptoutput.Text += $"       Have a nice day (:";
             }
             catch
             {
@@ -103,14 +126,7 @@ namespace Cash_regester
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-
-            //change = money - totalprice;
-
-            //Changeoutput.Text = $" $ {change}";
-        }
+       
     }
     
 }
